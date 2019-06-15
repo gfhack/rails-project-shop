@@ -10,7 +10,8 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <%= link_to t('contacts'), root_path, class: 'navbar-brand' %>
+      <%= link_to t('home'), root_path, class: 'navbar-brand' %>
+      <%= link_to t('products'), products_path, class: 'navbar-brand' %>
       <div class="collapse navbar-collapse">
         <div class="navbar-nav">
           <% if user_signed_in? %>
@@ -20,7 +21,9 @@
       </div>
     </nav>
 
-    <main class="container" role="main">
+    <main class="container mt-2" role="main">
+      <%= render 'flash' %>
+
       <%= yield %>
     </main>
   </body>
