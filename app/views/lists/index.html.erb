@@ -24,7 +24,11 @@
           <%= list.name %>
         </td>
         <td>
-          <%= list.bought %>
+          <% if list.bought %>
+            <%= t('list.bought') %>
+          <% else %>
+            <%= t('list.not_bought') %>
+          <% end %>
         </td>
         <td>
           <div class="btn-group btn-group-sm" role="group">

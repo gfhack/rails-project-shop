@@ -1,4 +1,4 @@
 class List < ActiveRecord::Base
-  has_many :items
-  accepts_nested_attributes_for :items
+  has_and_belongs_to_many :products, join_table: "items"
+  validates :name, presence: true
 end

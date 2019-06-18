@@ -5,9 +5,7 @@
     <%= f.input :name %>
     <%= f.label :bought %><br>
     <%= f.check_box :bought %>
-    <%= f.simple_fields_for :items do |i| %>
-      <%= i.input :product_id, as: :select, collection: @products %>
-    <% end %>
+    <%= f.association :products, as: :select, collection: @products %>
   </div>
 
   <div class="form-actions">

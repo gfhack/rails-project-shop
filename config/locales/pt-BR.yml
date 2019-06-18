@@ -18,6 +18,7 @@ pt-BR:
       one: Lista de compra
       other: Listas de compra
     bought: Comprada
+    not_bought: Não comprada
   product:
     name:
       zero: Produto

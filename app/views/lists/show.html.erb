@@ -16,16 +16,20 @@
       <%= t('list.bought') %>:
     </th>
     <td>
-      <%= @list.bought %>
+      <% if @list.bought %>
+        <%= t('list.bought') %>
+      <% else %>
+        <%= t('list.not_bought') %>
+      <% end %>
     </td>
   </tr>
-  <% @list.items.each do |item| -%>
+  <% @list.products.each do |product| -%>
   <tr>
     <th scope="row">
       <%= t('product.name', count: 1) %>:
     </th>
     <td>
-      <%= item.product.name %>
+      <%= product.name %>
     </td>
   </tr>
   <% end -%>
