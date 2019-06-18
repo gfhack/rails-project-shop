@@ -11,6 +11,13 @@ pt-BR:
   actions: Ações
   confirm_destroy: Deseja excluir?
   products: Produtos
+  lists: Listas de compra
+  list:
+    name:
+      zero: Lista de compra
+      one: Lista de compra
+      other: Listas de compra
+    bought: Comprada
   product:
     name:
       zero: Produto
@@ -18,10 +25,16 @@ pt-BR:
       other: Produtos
   helpers:
     submit:
+      list:
+        create: Criar
+        update: Atualizar
       product:
         create: Criar
         update: Atualizar
   simple_form:
     labels:
+      list:
+        name: Nome
+        bought: Comprada?
       product:
         name: Nome
