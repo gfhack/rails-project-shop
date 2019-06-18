@@ -1,6 +1,10 @@
-<h1>Editing Product</h1>
+<h1>
+  <%= t('editing', name: t('product.name', count: 1)) %>
+</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<br />
+
+<%= link_to t('show'), @product, class: 'btn btn-info', role: :button %>
+<%= link_to t('index'), products_path, class: 'btn btn-outline-secondary', role: :button %>

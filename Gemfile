@@ -41,6 +41,10 @@ gem 'carrierwave-i18n', '~> 0.2.0'
 
 gem 'rails-i18n', '~> 4.0', '>= 4.0.9'
 
+gem 'cancancan', '~> 3.0', '>= 3.0.1'
+
+gem "font-awesome-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

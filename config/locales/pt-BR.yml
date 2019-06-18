@@ -1,0 +1,27 @@
+pt-BR:
+  index: Principal
+  listing: Listando %{name}
+  editing: Editando
+  show: Exibir
+  showing: Exibindo
+  destroy: Remover
+  edit: Editar
+  new: Novo %{name}
+  name: Nome
+  actions: Ações
+  confirm_destroy: Deseja excluir?
+  products: Produtos
+  product:
+    name:
+      zero: Produto
+      one: Produto
+      other: Produtos
+  helpers:
+    submit:
+      product:
+        create: Criar
+        update: Atualizar
+  simple_form:
+    labels:
+      product:
+        name: Nome

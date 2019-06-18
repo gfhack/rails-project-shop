@@ -10,13 +10,33 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <%= link_to t('home'), root_path, class: 'navbar-brand' %>
-      <%= link_to t('products'), products_path, class: 'navbar-brand' %>
-      <div class="collapse navbar-collapse">
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <%= fa_icon 'home' %>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div  id="menu" class="collapse navbar-collapse">
+        <div class="navbar-nav mr-auto">
+          <%= link_to t('products'), products_path, class: 'nav-item nav-link' %>
+        </div>
+
         <div class="navbar-nav">
-          <% if user_signed_in? %>
-            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-item nav-link') %>
-          <% end %>
+          <li class="nav-item dropdown">
+            <a id="config" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= t('menu') %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="config">
+              <%= link_to 'pt-BR', root_path(locale: 'pt-BR'), class: 'dropdown-item' %>
+              <%= link_to 'en', root_path(locale: 'en'), class: 'dropdown-item' %>
+
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item') %>
+              <% end %>
+            </div>
+          </li>
         </div>
       </div>
     </nav>
