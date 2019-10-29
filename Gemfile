@@ -28,7 +28,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 
-gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'devise', '~> 4.7'
 gem 'devise-i18n', '~> 1.8'
 gem 'devise-bootstrap-views', '~> 1.1'
 
